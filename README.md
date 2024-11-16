@@ -1,61 +1,68 @@
 Customer Churn Prediction App
+
 An interactive Streamlit web application that predicts customer churn using multiple machine learning models. This tool helps banks identify at-risk customers and take proactive measures to improve customer retention.
 
 Features
+
 User-Friendly Interface: Input customer details and receive immediate churn predictions.
+
 Multi-Model Predictions: Leverage the power of various machine learning models for robust results.
+
 Visual Insights: Interactive charts to visualize prediction probabilities.
+
 Personalized Explanations: Understand the factors influencing each prediction.
+
 Automated Outreach: Generate personalized emails to encourage customers to stay.
+
 Machine Learning Models Used
+
 The application employs a range of machine learning models to enhance prediction accuracy:
 
-XGBoost Classifier (xgb_model.pkl)
+XGBoost Classifier (xgb_model.pkl): An optimized gradient boosting algorithm known for its performance and efficiency.
 
-An optimized gradient boosting algorithm known for its performance and efficiency.
-Random Forest Classifier (rf_model.pkl)
+Random Forest Classifier (rf_model.pkl): An ensemble of decision trees that reduces overfitting and improves accuracy.
 
-An ensemble of decision trees that reduces overfitting and improves accuracy.
-K-Nearest Neighbors (knn_model.pkl)
+K-Nearest Neighbors (knn_model.pkl): A simple, effective algorithm that classifies data based on proximity to neighbors.
 
-A simple, effective algorithm that classifies data based on proximity to neighbors.
 Additional models included:
 
 Naive Bayes Classifier (nb_model.pkl)
+
 Decision Tree Classifier (dt_model.pkl)
+
 Support Vector Machine (svm_model.pkl)
+
 Voting Classifier (voting_clf.pkl): Combines multiple models for consensus prediction.
+
 XGBoost with SMOTE (xgboost-SMOTE.pkl): Addresses class imbalance using Synthetic Minority Over-sampling Technique.
+
 XGBoost with Feature Engineering (xgboost-featureEngineered.pkl): Enhances model performance through engineered features.
+
 Installation
+
 Clone the Repository
 
-bash
-Copy code
 git clone https://github.com/your_username/your_repository.git
 cd your_repository
+
 Create a Virtual Environment
 
-bash
-Copy code
 python -m venv venv
+
 Activate the Virtual Environment
 
 Windows:
 
-bash
-Copy code
 venv\Scripts\activate
+
 macOS/Linux:
 
-bash
-Copy code
 source venv/bin/activate
+
 Install Dependencies
 
-bash
-Copy code
 pip install -r requirements.txt
+
 Set Up Environment Variables
 
 Obtain your API key for the OpenAI or Groq API.
@@ -64,37 +71,52 @@ Set the environment variable:
 
 Windows:
 
-bash
-Copy code
 set GROQ_API_KEY=your_api_key_here
+
 macOS/Linux:
 
-bash
-Copy code
 export GROQ_API_KEY='your_api_key_here'
+
 Run the Application
 
-bash
-Copy code
 streamlit run main.py
+
 Usage
+
 Navigate to http://localhost:8501 in your web browser.
+
 Select a customer from the dropdown or input custom details.
+
 View churn predictions from multiple models.
+
 Read the explanation of predictions.
+
 Generate personalized emails for at-risk customers.
+
 Project Structure
+
 main.py: The main Streamlit application.
+
 utils.py: Contains utility functions for generating charts and processing data.
+
 Models: Pre-trained machine learning models stored as .pkl files.
+
 churn.csv: Dataset containing customer information.
+
 Technologies Used
+
 Python
+
 Streamlit
+
 Pandas & NumPy
+
 Scikit-learn
+
 XGBoost
+
 Plotly
+
 OpenAI/Groq API
 Screenshots:
 ![image](https://github.com/user-attachments/assets/40ae1f5c-a092-4686-b33b-90e38b64ba4e)
