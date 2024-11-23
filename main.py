@@ -4,8 +4,19 @@ import pickle
 import numpy as np
 import os
 from openai import OpenAI
-import utils as ut
 
+import utils as ut
+# Basic Python Libraries
+import pandas as pd
+import numpy as np
+from utils import *
+import streamlit as st
+
+# Machine Learning Models (Deserialization)
+import pickle
+
+# XGBoost Library (if you are training or interacting with XGBoost models)
+import xgboost as xgb
 client = OpenAI(
   base_url="https://api.groq.com/openai/v1",
   api_key=os.environ['GROQ_API_KEY'],
@@ -132,6 +143,8 @@ def explain_prediction(probability, input_dict, surname):
 
   mention the name of the customer instead of referring to them by a vague noun.
   recheck all the things you wrote and logically check if everything makes sense
+
+  double check everything.
   """
 
   print("EXPLANATION PROMPT", prompt)
