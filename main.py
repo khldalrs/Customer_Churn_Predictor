@@ -144,7 +144,7 @@ def explain_prediction(probability, input_dict, surname):
   mention the name of the customer instead of referring to them by a vague noun.
   recheck all the things you wrote and logically check if everything makes sense
 
-  double check everything.
+  double check everything. Make sure you are not revealing any sensitive information about the customer.
   """
 
   print("EXPLANATION PROMPT", prompt)
